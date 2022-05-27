@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    margin: 0;
+    background: linear-gradient(to right, #eecda3, #ef629f);
+}
+
+header{
+    padding: 30px;
+}
+
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(5 , 1fr);
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.9);
+
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-size: 20px;
+
+}
+nav a::before{
+    content: '';
+    width: 0%;
+    height: 5px;
+    border-radius: 2px;
+    top: 100%;
+    left: 35%;
+    position: absolute;
+    background: white;
+    transition: 0.5s ;
+}
+
+nav a:hover::before{
+    width: 30%;
+}
+nav h1{
+    text-transform: uppercase;
+    line-height: 1em;
+}
+nav h1 div:nth-child(2) {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+nav h1 div:nth-child(1){
+    font-weight: 400;
+}
+
+main{
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-auto-rows:250px;
+    gap: 30px;
+}
+
+main div{
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, red, purple) 1;
+}
+
+main img {
+    min-width: 100%;
+    height: 100%;
+}
+
+
+
+main .short{
+    grid-row: span 1;
+    padding: 10px;
+}
+main .tall{
+    grid-row: span 2;
+}
+
+.longdiv{
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        border: 4px solid rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width:1050px) {
+    main{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media screen and (max-width:680px) {
+    main {
+        grid-template-columns:1fr;
+            grid-auto-rows: 250px;
+            margin:auto 80px;
+    }
+}
+@media screen and (max-width:571px) {
+    main {
+        grid-template-columns: 1fr;
+        
+    }
+    nav a{
+        font-size: 10px;
+    }
+        nav h1 div:nth-child(2) {
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    
+        nav h1 div:nth-child(1) {
+            font-weight: 200;
+        }
+}

@@ -1,0 +1,30 @@
+.basic{
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right , #eecda3 , #ef629f);
+    display: flex;
+    max-width: 100vh;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    transform: translate(50% ,50%);
+    position: relative;
+}  
+.blur{
+    position: absolute;
+    bottom: 25px;
+    right: 162px;
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
